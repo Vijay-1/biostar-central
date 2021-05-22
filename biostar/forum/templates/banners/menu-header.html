@@ -13,9 +13,9 @@
     <!-- <a class="item {% activate tab "news" %} " href="{% url 'post_topic' 'news' %}">
         <i class="newspaper icon"></i> News
     </a> -->
-    <a class="item {% activate tab "jobs" %} " href="{% url 'post_topic' 'jobs' %}">
+    <!--a class="item {% activate tab "jobs" %} " href="{% url 'post_topic' 'jobs' %}">
         <i class="briefcase icon"></i> Jobs
-    </a>
+    </a-->
     <a class="item {% activate tab "tutorials" %} " href="{% url 'post_topic' 'tutorials' %}">
         <i class="help circle icon"></i> Tutorials
     </a>
@@ -42,19 +42,19 @@
 <div class="ui labeled icon top attached evenly divided menu" id="menu-header" user-id="{{ request.user.id }}">
 
 
-    {% block headimg %}
-        <div class="header item" id="logo">
+    {#% block headimg %#}
+        <!--div class="header item" id="logo">
             <a href="/"><img width="250px" src="{% static "images/logo6.svg" %}"></a>
-        </div>
-    {% endblock %}
+        </div-->
+    {#% endblock %#}
 
     <a class="item {% activate tab "community" %}" href="{% url 'community_list' %}">
         <i class="world icon"></i> Community
     </a>
 
-    <a class="item {% activate tab "planet" %} " href="{% url 'blog_list' %}">
+    <!--a class="item {% activate tab "planet" %} " href="{% url 'blog_list' %}">
         <i class="rss icon"></i> Planet  {% count_badge counts.planet_count %}
-    </a>
+    </a-->
 
     {% if request.user.profile.is_moderator %}
         <a class="item {% activate tab 'spam' %} " href="{% url 'post_topic' 'spam' %}">
