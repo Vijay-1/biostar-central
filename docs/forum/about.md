@@ -1,6 +1,6 @@
 # About Kelungappaah
 
-Fork from Biostar
+Fork-ed from Biostar
 
 * detailed and specific, written clearly and simply
 
@@ -10,7 +10,8 @@ But we recommend that you make use of the search services to see if your questio
 
 ## Licensing
 
-Same as Biostar
+Same as Biostar. Biostar has been developed as an open source software with the **MIT licence**.
+organizations:
 
 
 ## Citing Biostar
