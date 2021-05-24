@@ -71,8 +71,7 @@ def informative_choices(choices):
     """
     mapper = {
         Post.QUESTION: "Ask a question", Post.TUTORIAL: "Share a Tutorial",
-        Post.JOB: "Post a Job Opening", Post.FORUM: "Start a Discussion",
-        Post.TOOL: "Share a Tool", Post.NEWS: "Announce News"
+        Post.FORUM: "Start a Discussion", Post.TOOL: "Share a Tool", Post.NEWS: "Announce News"
     }
     new_choices = []
     for c in choices:

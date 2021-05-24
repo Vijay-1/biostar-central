@@ -7,6 +7,11 @@ import os
 # The logging configuration
 from biostar.logconf import LOGGING
 
+from django.core.management.commands.runserver import Command as runserver
+
+ALLOWED_HOSTS = ['*']
+runserver.default_port = '8000'
+runserver.default_addr = '127.0.0.1'
 
 # Helper function for building absolute paths.
 def join(*args):
@@ -167,7 +172,7 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS = ['www.lvh.me', 'localhost', '127.0.0.1']
+#ALLOWED_HOSTS = ['www.lvh.me', 'localhost', '127.0.0.1']
 
 # The URL configuration.
 ROOT_URLCONF = 'biostar.urls'
@@ -219,7 +224,16 @@ TASK_RUNNER = 'block'
 TASK_MODULES = []
 
 # The email delivery engine.
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "gmailuser"
+EMAIL_HOST_PASSWORD = "###"
+EMAIL_PORT = 587
+
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Session engine.
 SESSION_ENGINE = "django.contrib.sessions.backends.db"
